@@ -1,0 +1,15 @@
+<!--Status of player, winner and game-->
+
+<div class="headProperty">
+    <h3 *ngIf="!resultIs ||tieGame">Player : {{playerName}}</h3>
+    <h2 *ngIf="resultIs"> Winner : Player {{winnerName}}! </h2>
+    <h2 *ngIf="tieGame">Game is draw!</h2>
+</div>
+
+<!--Tic toe tac board-->
+<main>
+    <app-tboard *ngFor="let val of playBoard; let i = index" [value]="val" (click)="enterVal(i)">
+    </app-tboard>
+    <!--New game button-->
+    <div class="nGame"><button (click)="newGame()">New Game</button></div>
+</main>

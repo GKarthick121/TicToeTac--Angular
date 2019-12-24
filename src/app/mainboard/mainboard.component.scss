@@ -1,0 +1,35 @@
+/*Header style*/
+
+.headProperty {
+    text-align: center;
+    padding-top: 120px;
+}
+
+
+/*Playboard style*/
+
+main {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-gap: 0px;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+app-tboard {
+    border: 1px black solid;
+    height: 100px;
+}
+
+
+/*Button style*/
+
+button {
+    width: 100px;
+    background-color: transparent;
+}
+
+.nGame {
+    padding-left: 100px;
+    padding-top: 30px;
+}
