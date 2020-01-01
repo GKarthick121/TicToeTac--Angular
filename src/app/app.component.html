@@ -1,33 +1,25 @@
-<!--Main Navigation-->
-<header class="intro-header">
+<!--Navigation bar- Material Design boostrap-->
+<header>
+    <div class="container">
+        <mdb-navbar class="navigation" SideClass="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
 
-    <!--Navbar-->
-    <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
-        <mdb-navbar-brand>
-            <a class="logo navbar-brand waves-light" mdbWavesEffect routerLink="/home"><strong>PTK</strong></a>
-        </mdb-navbar-brand>
-        <links>
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item waves-light" mdbWavesEffect>
-                    <a class="nav-link" routerLink="/home">Home<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item waves-light" mdbWavesEffect>
-                    <a class="nav-link" routerLink="/play">Play</a>
-                </li>
-                <li class="nav-item  waves-light" mdbWavesEffect>
-                    <a class="nav-link" routerLink="/instruction">Instruction</a>
-                </li>
-            </ul>
-        </links>
-    </mdb-navbar>
+            <a class="navigation__logo navbar-brand waves-light" mdbWavesEffect routerLink="/home"><strong>Home</strong><span class="sr-only">(current)</span></a>
+            <links>
+                <ul class="navigation__list  navbar-nav mr-auto">
+                    <li class="navigation__list-item nav-item waves-light" mdbWavesEffect>
+                        <a class="navigation__link  nav-link" routerLink="/play">Play</a>
+                    </li>
+                    <li class="navigation__list-item  nav-item  waves-light" mdbWavesEffect>
+                        <a class="navigation__link  nav-link" routerLink="/instruction">Instruction</a>
+                    </li>
+                </ul>
+            </links>
+
+        </mdb-navbar>
+    </div>
 
     <body>
-        <div class="view jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url(./assets/Image/TTT.jpg);">
-            <div class="full-bg-img mask rgba-black-light">
-
-            </div>
-        </div>
-
+        <div class="view"></div>
         <div [@slideInOutAnimation]="prepareRoute(outlet)">
             <router-outlet #outlet="outlet"></router-outlet>
         </div>
