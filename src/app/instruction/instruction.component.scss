@@ -1,12 +1,14 @@
-    .paragraph {
-        display: grid;
-        width: 100%;
-        justify-content: center;
+    .container {
         padding-top: 200px;
         padding-left: 200px;
-        color: white;
-        text-align: justify;
-        height: 100px;
+        line-height: 30px;
         letter-spacing: 3px;
-        grid-gap: 0px;
+    }
+    
+    @media (max-width: 740px) {
+        .container {
+            padding-left: 5px;
+            padding-right: 5px;
+            letter-spacing: 2px;
+        }
     }
