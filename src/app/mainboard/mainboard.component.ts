@@ -1,10 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import { slideInOutAnimation } from '../route-animations';
+
 
 @Component({
   selector: 'app-mainboard',
   templateUrl: './mainboard.component.html',
-  styleUrls: ['./mainboard.component.scss']
+  styleUrls: ['./mainboard.component.scss'],
+  animations:[slideInOutAnimation],
+  host:{'[@slideInOutAnimation]': '' }
 })
+
 export class MainboardComponent implements OnInit {
 
 // Initialize variable
@@ -22,7 +27,8 @@ constructor() { }
 
 // Initialize values
 
-ngOnInit() { this.newGame(); }
+ngOnInit() {
+  this.newGame(); }
 
 newGame() {
   this.playerIsnext = true;
@@ -39,6 +45,7 @@ newGame() {
 get valueOf() {return this.playerIsnext ? 'X' : 'O'; }
 get playerName() {return this.plName ? '1' : '2'; }
 get winnerName() {return this.winName ? '1' : '2'; }
+
 
 // Check the playboard array created and if filled stop the game
 // else continue with next player
@@ -86,6 +93,7 @@ selectWinner() {
     }
   return null;
 }
+
 
 
 }
