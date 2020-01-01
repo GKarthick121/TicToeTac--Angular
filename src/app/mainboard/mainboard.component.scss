@@ -1,35 +1,47 @@
 /*Header style*/
 
-.headProperty {
-    text-align: center;
+.header {
     padding-top: 120px;
+    text-align: center;
+}
+
+
+/* Card style*/
+
+.container__card {
+    width: 250px;
+    height: 250px;
+    padding-top: 80px;
+    margin-left: 150px;
+    margin-top: 150px;
+    color: white;
+}
+
+.container__card-header {
+    padding-bottom: 40px;
 }
 
 
 /*Playboard style*/
 
-main {
+.block {
     display: grid;
-    grid-template-columns: 100px 100px 100px;
-    grid-gap: 0px;
+    grid-template-columns: 150px 150px 150px;
+    grid-gap: 5px;
     justify-content: center;
-    padding-top: 50px;
+    padding-top: 40px;
+    padding-bottom: 80px;
 }
 
-app-tboard {
-    border: 1px black solid;
-    height: 100px;
+.block__tboard {
+    border: .5px solid lightgrey;
+    height: 150px;
 }
 
-
-/*Button style*/
-
-button {
-    width: 100px;
-    background-color: transparent;
-}
-
-.nGame {
-    padding-left: 100px;
-    padding-top: 30px;
+@media (max-width: 740px) {
+    .container__card {
+        display: inline-block;
+        width: 100%;
+        margin-right: 150px;
+    }
 }
