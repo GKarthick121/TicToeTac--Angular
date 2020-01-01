@@ -6,8 +6,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { TboardComponent } from './tboard/tboard.component';
-
-
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
+import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
+import { NbEvaIconsModule } from '@nebular/eva-icons';
 
 
 
@@ -18,14 +20,20 @@ import { TboardComponent } from './tboard/tboard.component';
     BrowserAnimationsModule,
     AppRoutingModule,
     RouterModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    NbThemeModule.forRoot({ name: 'dark' }),
+    NbLayoutModule,
+    NbEvaIconsModule,
+
   ],
+
   declarations: [
     AppComponent,
-    routingComponents,
     TboardComponent,
+    routingComponents,
+
 
   ],
-
 
   providers: [],
   bootstrap:  [AppComponent]
